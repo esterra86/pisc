@@ -12,16 +12,32 @@ void DAC_MCP4921_Set(unsigned int uiVoltage);
 
 
 int  main(){
-	DAC_MCP4921_Set(2);
-	while(1){}
+	PINSEL0 = PINSEL0 | P04_SCK0 | P05_SDO | P06_SDI;
+
+	IODIR0 = IODIR0 | P010_CS;
+	
+
+	S0SPCR |= 0x20;
+	S0SPCCR = 0x08;
+	
+	
+	while(1){
+		IOCLR0 = IOCLR0 |  P010_CS;
+		S0SPDR = 0xcf;
+		while(!(S0SPSR & SPIF)){} 
+		S0SPDR = 0xff;
+		while(!(S0SPSR & SPIF)){}
+			
+		IOSET0 = IOSET0 |  P010_CS;
+	}
 }
 //00101010
 
 void DAC_MCP4921_Set(unsigned int uiVoltage) {
 	
 	//unsigned char data_to_send;
-	volatile unsigned char status;
-	volatile unsigned char dummy ;
+	//volatile unsigned char status;
+	//volatile unsigned char dummy ;
 	uiVoltage =  (uiVoltage << 12)/5;
 	
 	PINSEL0 = PINSEL0 | P04_SCK0 | P05_SDO | P06_SDI;
@@ -40,15 +56,15 @@ void DAC_MCP4921_Set(unsigned int uiVoltage) {
 	
 	
 	while(!(S0SPSR & SPIF)){} 
-	status = S0SPSR;
-	dummy = S0SPDR;
+	//status = S0SPSR;
+	//dummy = S0SPDR;
 	//data_to_send = uiVoltage & 0xFF;
 	S0SPDR =0xf0ff;
 		
 	
 	while(!(S0SPSR & SPIF)){} 
-	status = S0SPSR;
-	dummy = S0SPDR;
+	//status = S0SPSR;
+	//dummy = S0SPDR;
 	
 	IOSET0 |= P010_CS;
 }
