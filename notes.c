@@ -7,7 +7,7 @@ CPOL - Clock Polarity) defines the idle state of the clock line
 	idle state is defined as the period when CS is high and transitioning to low
 	at the start of the transmission and when CS is low and transitioning to high at the end of the transmission.
 		= 1: Clock is low when idle.
-		= 0: Clock is high when idle.
+		= 0: Clock is high when idle.                                                                                                                                                                                                                                                                 
 MSTR -  master  slave  select -  configures the device as either a master or a slave in SPI communication.
 		= 1: Configures the device as the master.
 		= 0: Configures the device as the slave.
