@@ -11,6 +11,9 @@
 #define VREF 					5
 #define SPIF 					(1<<7)
 
+#define M_PI 3.14159265358979323846
+
+
 typedef struct SPCR_FLAGS{
     unsigned 		 		: 2;
     unsigned BIT_EN : 1;
@@ -31,5 +34,5 @@ typedef union SPCR{
 
 void DAC_MCP4921_Set(unsigned int uiVoltage);
 void DAC_MCP4921_Set_mV(unsigned int uiVoltage);
-
+void  GenerateSineLUT(short *sine_table, unsigned int points, unsigned int ampl_mv, unsigned int dc_offset);
 #endif

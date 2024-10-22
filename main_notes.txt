@@ -1,0 +1,6 @@
+zmierzona 172 Hz
+częstotliwość CS 61.2Khz
+61.2KHz:360 = 170
+
+//‘extern’ keyword is used for a variable when we declare the variable in one file and define it in another file.
+//the extern keyword is used to extend the visibility of variables/functions.
