@@ -102,11 +102,11 @@
           <SimDllName>SARM.DLL</SimDllName>
           <SimDllArguments>-cLPC2100</SimDllArguments>
           <SimDlgDll>DARMP.DLL</SimDlgDll>
-          <SimDlgDllArguments>-pLPC2132</SimDlgDllArguments>
+          <SimDlgDllArguments>-pLPC21x9/01</SimDlgDllArguments>
           <TargetDllName>SARM.DLL</TargetDllName>
           <TargetDllArguments></TargetDllArguments>
           <TargetDlgDll>TARMP.DLL</TargetDlgDll>
-          <TargetDlgDllArguments>-pLPC2132</TargetDlgDllArguments>
+          <TargetDlgDllArguments>-pLPC21x9/01</TargetDlgDllArguments>
         </DllOption>
         <DebugOption>
           <OPTHX>
