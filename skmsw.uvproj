@@ -397,6 +397,16 @@
               <FileType>2</FileType>
               <FilePath>.\Startup.s</FilePath>
             </File>
+            <File>
+              <FileName>can.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\can.c</FilePath>
+            </File>
+            <File>
+              <FileName>main.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\main.c</FilePath>
+            </File>
           </Files>
         </Group>
       </Groups>
