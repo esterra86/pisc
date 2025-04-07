@@ -397,6 +397,16 @@
               <FileType>2</FileType>
               <FilePath>.\Startup.s</FilePath>
             </File>
+            <File>
+              <FileName>main.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\main.c</FilePath>
+            </File>
+            <File>
+              <FileName>spi_basic.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\spi_basic.c</FilePath>
+            </File>
           </Files>
         </Group>
       </Groups>
